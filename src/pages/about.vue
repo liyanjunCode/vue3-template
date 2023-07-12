@@ -1,11 +1,8 @@
-
 <template>
-    about
+    <div>about</div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
 
 </script>
 

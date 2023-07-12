@@ -28,5 +28,7 @@ module.exports = {
     'vue'
   ],
   rules: {
+    // 关闭文件名需驼峰两单词校验
+    'vue/multi-word-component-names': 0
   }
 }

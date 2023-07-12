@@ -1,17 +1,15 @@
-
 <template>
     <div>
-        2222
         <span>home</span>
     </div>
 </template>
 
 <script setup>
-    import useStore from '@store'
+import useStore from '@store'
 
-    const store = useStore()
+const store = useStore()
 
-    console.log(store.someState, 'storestore')
+console.log(store.someState, 'storestore')
 
 </script>
 

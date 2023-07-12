@@ -1,4 +1,3 @@
-
 <template>
   <Router-view></Router-view>
 </template>
@@ -7,7 +6,8 @@
 const calc = (a, b) => {
   return a - b
 }
-// console.log(calc(1024, 28))
+console.log(99)
+console.log(calc(1024, 28))
 
 </script>
 

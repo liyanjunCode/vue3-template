@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src --ext .js,.ts --cache --fix",
+    "lint": "eslint src --ext .js,.ts,.vue --cache --fix",
     "fix": "npx prettier --write .",
     "prepare": "husky install"
   },
