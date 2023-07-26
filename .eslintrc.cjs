@@ -3,7 +3,7 @@ module.exports = {
         browser: true,
         es2021: true
     },
-    extends: ['standard', 'plugin:vue/vue3-essential'],
+    extends: ['standard', 'plugin:vue/vue3-essential', 'plugin:prettier/recommended'],
     overrides: [
         {
             env: {
@@ -21,12 +21,18 @@ module.exports = {
     },
     plugins: ['vue'],
     rules: {
-        // 'prettier/prettier': 'error',
+        'prettier/prettier': 'off',
         // 关闭文件名需驼峰两单词校验
         'vue/multi-word-component-names': 0,
 
         // 必须使用三等运算符
-        eqeqeq: ['error', 'always', { null: 'ignore' }],
+        eqeqeq: [
+            'error',
+            'always',
+            {
+                null: 'ignore'
+            }
+        ],
 
         // 可以使用const声明变量的情况下，必须使用const
         'prefer-const': 'error',
@@ -44,7 +50,13 @@ module.exports = {
         'array-bracket-spacing': ['error', 'never'],
 
         // 对象内的值前面必须有空格
-        'comma-spacing': ['error', { before: false, after: true }],
+        'comma-spacing': [
+            'error',
+            {
+                before: false,
+                after: true
+            }
+        ],
 
         // 括号内的参数不允许空格
         'space-in-parens': ['error'],
@@ -110,7 +122,12 @@ module.exports = {
         'import/imports-first': 'off',
 
         // import语句后应该有一个空行
-        'import/newline-after-import': ['error', { count: 1 }],
+        'import/newline-after-import': [
+            'error',
+            {
+                count: 1
+            }
+        ],
 
         // 每行最大字符数150
         'max-len': [
@@ -123,13 +140,25 @@ module.exports = {
         // 禁止使用var
         'no-var': 'error',
 
-        'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
+        'no-unused-vars': [
+            'error',
+            {
+                vars: 'all',
+                args: 'after-used',
+                ignoreRestSiblings: true
+            }
+        ],
 
         // 统一使用单引号
         quotes: ['error', 'single'],
 
         // 禁止使用多余的空格
-        'no-trailing-spaces': ['error', { ignoreComments: true }],
+        'no-trailing-spaces': [
+            'error',
+            {
+                ignoreComments: true
+            }
+        ],
 
         // 使用new创造的对象必须赋值给一个变量
         'no-new': 0,

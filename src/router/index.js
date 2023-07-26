@@ -1,16 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import routes from './routes'
+import auth from './middleware/auth'
 
-import Home from '@pages/home.vue'
-import About from '@pages/about.vue'
-
-const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About }
-]
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
+    history: createWebHashHistory(),
+    routes
 })
 
+//  登录鉴权
+router.beforeEach(auth)
 export default router

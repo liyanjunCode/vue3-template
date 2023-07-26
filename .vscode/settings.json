@@ -1,29 +1,18 @@
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-        "source.organizeImports": true
-    },
-    "editor.lineNumbers": "on",
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //针对共用的语言如JS、TS和JSX关闭文件保存自动格式化功能，通过eslint来做这件事
     "[javascript]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.formatOnSave": false
     },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "[javascriptreact]": {
+        "editor.formatOnSave": false
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.formatOnSave": false
     },
-    "eslint.validate": [
-        "javascript", //  用eslint的规则检测js文件
-        "javascriptreact", //  用eslint的规则检测js文件
-        "vue",
-        {
-            "language": "vue",
-            "autoFix": true
-        }
-    ]
+    "editor.codeActionsOnSave": {
+        //告诉ESLint插件在保存时运行
+        "source.fixAll.eslint": true
+    }
 }
