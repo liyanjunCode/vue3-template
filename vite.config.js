@@ -5,6 +5,8 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import ElementPlus from 'unplugin-element-plus/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import viteCompression from 'vite-plugin-compression'
+// import { dependencies } from './package.json'
 
 const path = name => resolve(__dirname, name)
 
@@ -13,7 +15,21 @@ export default defineConfig({
     base: './',
     build: {
         sourcemap: false,
-        outDir: 'dist'
+        outDir: 'dist',
+        rollupOptions: {
+            // 拆分三方包 打包
+            manualChunks: id => {
+                if (id.includes('node_modules')) {
+                    // dependencies
+                    // const depenKeys = Object.keys(dependencies);
+                    // const match = depenKeys.forEach(key => {
+                    //     return id.includes(key)
+                    // })
+                    // return match
+                    return 'vendor'
+                }
+            }
+        }
     },
     server: {
         // origin: 'http://10.181.196.166:10001',
@@ -46,6 +62,7 @@ export default defineConfig({
             renderLegacyChunks: true,
             polyfills: ['es.global-this'],
             targets: ['> 1%', 'last 2 versions', 'not ie <= 11']
-        })
+        }),
+        viteCompression()
     ]
 })
