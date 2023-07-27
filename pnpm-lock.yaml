@@ -24,6 +24,7 @@ specifiers:
   prettier: ^2.8.8
   sass: ^1.63.5
   tailwindcss: ^3.3.2
+  trtc-js-sdk: ^4.15.12
   unplugin-element-plus: ^0.7.2
   vite: ^4.3.9
   vite-plugin-compression: ^0.5.1
@@ -36,6 +37,7 @@ dependencies:
   element-plus: 2.3.8_vue@3.3.4
   pinia: 2.1.4_vue@3.3.4
   pinia-plugin-persistedstate: 3.1.0_pinia@2.1.4
+  trtc-js-sdk: 4.15.12
   vue: 3.3.4
   vue-router: 4.2.2_vue@3.3.4
 
@@ -5055,6 +5057,10 @@ packages:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
     engines: {node: '>=8'}
     dev: true
+
+  /trtc-js-sdk/4.15.12:
+    resolution: {integrity: sha512-n0zjxRpGDXVb1MkbcAyWSram8PsbzC0DA6vRWfTTrLAZfeG8RCYEOAeKExOefudNrg7TEjuyNBUzeqFfXeZ+Fg==}
+    dev: false
 
   /ts-interface-checker/0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
